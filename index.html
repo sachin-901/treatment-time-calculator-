@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treatment Time Calculator</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <h1>Treatment Time Calculator</h1>
+      <p class="subtitle">Calculate accurate treatment time based on field and setup parameters</p>
+
+      <form id="calcForm">
+        <div class="grid">
+          <label>Total dose per fraction:</label>
+          <input type="number" step="any" id="Dose" required />
+
+          <label>Field weight:</label>
+          <input type="number" step="any" id="field_weight" required />
+
+          <label>Total weight:</label>
+          <input type="number" step="any" id="total_weight" required />
+
+          <label>X field size (cm):</label>
+          <input type="number" step="any" id="X" required />
+
+          <label>Y field size (cm):</label>
+          <input type="number" step="any" id="Y" required />
+
+          <label>Wedge factor:</label>
+          <input type="number" step="any" id="wedge" required />
+
+          <label>Tray factor:</label>
+          <input type="number" step="any" id="tray" required />
+
+          <label>Baseplate factor:</label>
+          <input type="number" step="any" id="Baseplate" required />
+
+          <label>PDD or TAR (as decimal e.g., 0.68):</label>
+          <input type="number" step="any" id="pdd" required />
+
+          <label>Output factor:</label>
+          <input type="number" step="any" id="Output" required />
+        </div>
+
+        <button type="submit" class="btn">Calculate</button>
+      </form>
+
+      <div class="result hidden" id="resultCard">
+        <h2>Results</h2>
+        <p id="efs"></p>
+        <p id="approx_field"></p>
+        <p id="treatment_time"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Designed by Sachin Kumar • Medical Physics Tools</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
